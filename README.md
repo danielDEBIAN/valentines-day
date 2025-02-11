@@ -1,45 +1,65 @@
-# React + TypeScript + Vite
+# **✨ Neon Buttons App 🚀**
 
-## Project Description
+## **🌟 Project Overview**
 
-This project is a simple web application built using React, TypeScript, and Vite. It serves as a demonstration of how to set up a modern web development environment with these technologies.
+This is a fun **interactive web app** built with **React and TypeScript**, featuring a **neon-themed UI** with animated buttons.
 
-## Features
+### **🕹️ How It Works:**
 
-- **React**: A JavaScript library for building user interfaces.
-- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-- **Vite**: A fast build tool and development server.
+- **"Yes" Button** → Reveals a hidden **Reload** button when clicked.
+- **"No" Button** → Displays a **random message** each time it's clicked and temporarily disables after multiple clicks.
+- **"Reload" Button** → Refreshes the page (appears only after clicking "Yes").
 
-## Getting Started
+🎨 **Stylish neon UI**, smooth hover effects, and fun interactions!
 
-To get started with this project, follow these steps:
+---
 
-1. **Clone the repository**:
+## **🛠️ Technologies Used**
 
-   ```sh
-   git clone /Users/danieleb/Documents/Code/valentines-day
-   cd valentines-day
-   ```
+### **Frontend:**
 
-2. **Install dependencies**:
+🚀 **React (TypeScript)** → Component-based architecture.
+🎨 **CSS (Custom Styles, No Tailwind)** → Neon effects, hover animations, and transitions.
 
-   ```sh
-   npm install
-   ```
+### **Features:**
 
-3. **Run the development server**:
+✅ **Neon text & buttons** with glowing effects.
+✅ **Random messages** when clicking "No."
+✅ **Hidden "Reload" button** appears when clicking "Yes."
+✅ **Temporarily disabled "No" button** after multiple clicks.
+✅ **Smooth hover effects for buttons.**
 
-   ```sh
-   npm run dev
-   ```
+---
 
-4. **Build for production**:
+## **🚀 Installation & Setup**
 
-   ```sh
-   npm run build
-   ```
+### **1️⃣ Clone the repository:**
 
-5. **Preview the production build**:
-   ```sh
-   npm run serve
-   ```
+```bash
+git clone https://github.com/danielDEBIAN/valentines-day.git
+cd valentines-day
+```
+
+### **2️⃣ Install dependencies:**
+
+```bash
+npm install
+```
+
+### **3️⃣ Start the development server:**
+
+```bash
+npm run dev
+```
+
+### **4️⃣ Open the app in your browser:**
+
+```
+http://localhost:3000
+```
+
+---
+
+## **🌟 License**
+
+This project is licensed under the **MIT License**. Feel free to modify and share! 🎉

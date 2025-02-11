@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+#root {
+  margin: 0;
+  font-family: "Pacifico", serif;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.neon-text {
+  font-size: 50px; /* Make the text responsive */
+  color: #fde5eb; /* Neon pink */
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #f8638b, 0 0 10px #f8638b, 0 0 20px #f8638b, 
+               0 0 40px #f90c4b, 0 0 80px #f90c4b; /* Glow effect */
+  animation: flicker 1.5s infinite alternate; /* Flicker animation */
+}
+
+/* Buttons container */
+.button-container {
+  margin-top: 20px;
+}
+
+/* Neon button styles */
+.neon-button {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 40px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #f90c4b;
+  background: transparent;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* Yes button - Green neon */
+.neon-button.yes {
+  border: 3px solid #42a06b;
+  box-shadow: 0 0 5px #42a06b, 0 0 10px #42a06b, 0 0 20px #42a06b;
+}
+
+.neon-button.yes:hover {
+  background: #42a06b;
+  color: #fde5eb;
+  box-shadow: 0 0 10px #42a06b, 0 0 20px #42a06b, 0 0 40px #42a06b;
+}
+
+/* No button - Red neon */
+.neon-button.no {
+  border: 3px solid #fc6565;
+  box-shadow: 0 0 5px #fc6565, 0 0 10px #fc6565, 0 0 20px #fc6565;
+}
+
+.neon-button.no:hover {
+  background: #fc6565;
+  color: #fde5eb;
+  box-shadow: 0 0 10px #fc6565, 0 0 20px #fc6565, 0 0 40px #fc6565;
+}
+
+/* Disabled No button - Gray color */
+.neon-button.no.disabled {
+  border: 3px solid gray;
+  box-shadow: none;
+  background: gray;
+  color: darkgray;
+  cursor: not-allowed;
+}
+
+/* Reload button - Blue neon */
+.neon-button.reload {
+  border: 3px solid #0099ff;
+  box-shadow: 0 0 5px #0099ff, 0 0 10px #0099ff, 0 0 20px #0099ff;
+}
+
+.neon-button.reload:hover {
+  background: #0099ff;
+  color: black;
+  box-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff, 0 0 40px #0099ff;
+}
+
+.message {
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #c10e64, 0 0 10px #c10e64;
+  margin-top: 20px;
+}
+
+.reload-message {
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #c10e64, 0 0 10px #c10e64;
+  margin-top: 20px;
+}
+
+.reload-container {
+  margin-top: 500px;
+  justify-content: center;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}

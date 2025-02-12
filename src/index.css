@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("./public/hearts-background.jpg"); /* Use a smaller hearts image */
+  background-image: url("./hearts-background.jpg"); /* Use a smaller hearts image */
   background-repeat: repeat; /* Repeats the image both horizontally and vertically */
   background-size: 700px 550px; /* Sets the background image size to 20px by 20px for mini hearts */
   background-position: center; /* Keeps the image centered */

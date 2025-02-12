@@ -15,6 +15,8 @@ const App: React.FC = () => {
   const [message, setMessage] = useState("");
   const [disableNo, setDisableNo] = useState(false);
   const [showReload, setShowReload] = useState(false);
+  const [showNote, setShowNote] = useState(false);
+  const [showSong, setShowSong] = useState(false);
 
   const handleNoClick = () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
@@ -25,6 +27,14 @@ const App: React.FC = () => {
     setDisableNo(true);
     setShowReload(true);
     setMessage("Lo sabía, soy irresistible 😎");
+
+    setTimeout(() => {
+      setShowNote(true);
+    }, 2000);
+
+    setTimeout(() => {
+      setShowSong(true);
+    }, 2000);
   };
 
   // Function to reload the page
@@ -40,6 +50,44 @@ const App: React.FC = () => {
         <button className={`neon-button no ${disableNo ? "disabled" : ""}`} onClick={handleNoClick} disabled={disableNo}>No</button>
       </div>
       {message && <p className="message">{message}</p>}
+
+      {showNote && (
+        <div className="post-it">
+          <p>Te amo con toda mi alma ❤️</p>
+          <p>
+            Se que nosotros no necesitamos un día especial para decirnos lo importante que somos el uno para el otro,
+            pero no podía pasar por alto esta fecha y que mejor que con esto
+            que en primera disfrute mucho hacer porque es para tí.
+          </p>
+          <p>
+            Yo se que seguiremos aqui por mucho tiempo más y que habra
+            muchos 14's más para celebrar juntos, y este es muy especial para ambos
+            porque es el primero que pasamos juntos, el primero de 192323 más.
+          </p>
+        </div>
+      )}
+
+      {showSong && (
+        <div className= "song-container">
+          <p className="message">Y por cierto... Esta canción es para ti:</p>
+          <iframe
+            src="https://open.spotify.com/embed/track/3knyFcZMpKeYsxaiVRjTSL?utm_source=generator&theme=0"
+            width="50%"
+            height="352"
+            style={{ borderRadius: "20px" }}
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+          <div className="song-info">
+            <p className="song-message">
+              No es una canción de amor, pero si una que habla sobre la vida adulta,
+              estamos en una nueva etapa de nuestras vidas, donde hay de todo y que
+              nos ha traido muchos cambios, pero nada importa porque estamos juntos,
+              y esa es toda la motivación que necesitamos, te amo mi compañera de vida ❤️
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Reload button */}
       {showReload &&

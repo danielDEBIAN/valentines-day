@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css"; // Make sure to import the CSS
+import musicFile from "./assets/background-music.mp3";
 
 const messages = [
   "¿Segura? 😢",
@@ -17,6 +18,29 @@ const App: React.FC = () => {
   const [showReload, setShowReload] = useState(false);
   const [showNote, setShowNote] = useState(false);
   const [showSong, setShowSong] = useState(false);
+  const [showMusicMessage, setShowMusicMessage] = useState(false);
+  const [audio] = useState(new Audio(musicFile));
+
+  useEffect(() => {
+    audio.loop = false; // Disable default looping
+    audio.volume = 1; // Adjust volume
+
+    // Restart music when it ends without echo
+    const restartMusic = () => {
+      audio.currentTime = 0; // Reset time
+      audio.play();
+    };
+
+    audio.addEventListener("ended", restartMusic);
+    audio.play().catch(() => {
+      console.log("User interaction required for autoplay.");
+    });
+
+    return () => {
+      audio.removeEventListener("ended", restartMusic);
+      audio.pause();
+    };
+  }, [audio]);
 
   const handleNoClick = () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
@@ -38,6 +62,10 @@ const App: React.FC = () => {
     setTimeout(() => {
       setShowReload(true);
     }, 6000);
+
+    setTimeout(() => {
+      setShowMusicMessage(true);
+    }, 8000);
   };
 
   // Function to reload the page
@@ -72,7 +100,7 @@ const App: React.FC = () => {
 
       {showSong && (
         <div className= "song-container">
-          <p className="message">Y por cierto... Esta canción es para ti:</p>
+          <p className="content">Y por cierto... Esta canción es para ti:</p>
           <iframe
             src="https://open.spotify.com/embed/track/3knyFcZMpKeYsxaiVRjTSL?utm_source=generator&theme=0"
             width="50%"
@@ -91,6 +119,19 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Music player */}
+      {showMusicMessage &&
+        <>
+          <div className="music-container">
+            <p>
+              Por cierto, la música de fondo se la vas a tener que pedir
+              al admin de la página, porque no esta en ningun lado.
+              Lleva por título "14+23=❤️" y es de un artista muy morefoker.
+            </p>
+          </div>
+        </>
+      }
 
       {/* Reload button */}
       {showReload &&

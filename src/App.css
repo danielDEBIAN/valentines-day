@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 #root {
   margin: 0;
@@ -96,15 +97,19 @@
   margin-top: 20px;
 }
 
-.reload-message {
-  font-size: 20px;
-  color: #ffffff;
-  text-shadow: 0 0 5px #c10e64, 0 0 10px #c10e64;
+.content {
+  font-size: 30px;
   margin-top: 20px;
 }
 
+.reload-message {
+  font-size: 15px;
+  margin-top: 200px;
+  font-family: "Indie Flower", serif;
+}
+
 .reload-container {
-  margin-top: 100px;
+  margin-top: 10px;
   justify-content: center;
 }
 
@@ -142,12 +147,15 @@
 
 .song-container {
   margin-top: 530px;
+  font-family: "Indie Flower", serif;
+}
+
+.music-container {
+  font-family: "Indie Flower", serif;
 }
 
 .song-message {
   font-size: 25px;
-  color: #ffffff;
-  text-shadow: 0 0 5px #c10e64, 0 0 10px #c10e64;
   margin-top: 20px;
 }
 

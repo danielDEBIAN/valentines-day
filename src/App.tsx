@@ -25,7 +25,6 @@ const App: React.FC = () => {
 
   const handleYesClick = () => {
     setDisableNo(true);
-    setShowReload(true);
     setMessage("Lo sabía, soy irresistible 😎");
 
     setTimeout(() => {
@@ -34,7 +33,11 @@ const App: React.FC = () => {
 
     setTimeout(() => {
       setShowSong(true);
-    }, 2000);
+    }, 4000);
+
+    setTimeout(() => {
+      setShowReload(true);
+    }, 6000);
   };
 
   // Function to reload the page

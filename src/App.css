@@ -162,3 +162,10 @@
   50% { opacity: 0.8; }
   100% { opacity: 1; }
 }
+
+/* Responsive style for smaller screens */
+@media (max-width: 600px) {
+  .post-it {
+    top: 200px; /* Increase top margin for better spacing */
+  }
+}
